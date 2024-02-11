@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 100;
+
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <h2>Zapremina valjka</h2>
+        <label for="poluprečnik">Unesite poluprečnik(r)</label>
+        <input type="number" id="poluprečnik" min="0" placeholder="poluprečnik">
+        <label for="visina">Unesite visinu (H)</label>
+        <input type="number" id="visina" min="0" placeholder="visina">
+        <button onclick="izracunajVolumen()">click here</button>
+        <p id="rezultat"></p>
+    </fieldset>
+    <script>
+        function izracunajVolumen() {
+            const π = 3.14;
+            var poluprečnik = parseFloat(document.getElementById("poluprečnik").value);
+            var visina = parseFloat(document.getElementById("visina").value);
+            var zapremina = Math.pow(poluprečnik, 2) * π * visina;
+            document.getElementById("rezultat").innerHTML = "zapremina je" + zapremina;
+        }
+    </script>
+    </div>
+</body>
+
+</html>
