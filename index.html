@@ -1,9 +1,59 @@
-<h1>Introduction to Front-end Development</h1>
-<p>A front-end developer architects and develops client part of websites and applications using web technologies (languages):</p>
-<p>new paragraph</p>
-<ul>
-<li style="color: red;">HTML</li>
-<li style="color: green;">CSS</li>
-<li style="color: blue;">JavaScript</li>
-</ul>
-<p> da li ima promesse</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABAKUS</title>
+
+
+
+</head>
+
+
+<body>
+    <h2>Digitron</h2>
+    <input type="number" id="prviBroj" placeholder="Unesite prvi broj">
+    <select id="operacija">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="number" id="drugiBroj" placeholder="Unesite drugi broj">
+    <button onclick="izracunaj()">Izracunaj</button>
+    <script>
+        function izracunaj() {
+            var prviBroj =
+                parseFloat(document.getElementById('prviBroj').value);
+            var operacija =
+                document.getElementById('operacija').value;
+            var drugiBroj =
+                parseFloat(document.getElementById('drugiBroj').value);
+
+            var rezultat;
+            switch (operacija) {
+                case '+':
+                    rezultat = prviBroj + drugiBroj;
+                    break;
+                case '-':
+                    rezultat = prviBroj - drugiBroj;
+                    break;
+                case '*':
+                    rezultat = prviBroj * drugiBroj;
+                    break;
+                case '/':
+                    rezultat = prviBroj / drugiBroj;
+                    break;
+                default:
+                    alert = ("nepoznata operacija!");
+                    return;
+            }
+            alert("Rezultat operacije: " + rezultat);
+
+        }
+        izvrsiOperaciju();
+    </script>
+</body>
+
+</html>
