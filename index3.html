@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LgbtPrsten</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: black;
+      }
+      .lgbt-prsten {
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: rotate 5s linear infinite;
+      }
+      .crni-prsten {
+        width: 300px;
+        height: 300px;
+        background-color: black;
+        border-radius: 50%;
+        animation: pulse 1.5s ease-in-out infinite;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+      }
+      .crni-talas:nth-child(1) {
+        animation-delay: 0s;
+      }
+      .crni-talas:nth-child(2) {
+        animation-delay: 0.5s;
+      }
+      .crni-talas:nth-child(3) {
+        animation-delay: 1s;
+      }
+      @keyframes rotate {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="lgbt-prsten">
+      <div class="crni-prsten">
+        <div class="crni-talas"></div>
+        <div class="crni-talas"></div>
+        <div class="crni-talas"></div>
+      </div>
+    </div>
+  </body>
+</html>
